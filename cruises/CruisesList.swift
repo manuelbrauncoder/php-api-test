@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CruisesList: View {
     
-    @State private var searchTerm = ""
     @StateObject private var api = CruisesAPI()
     
     var body: some View {
@@ -32,8 +31,6 @@ struct CruisesList: View {
             }
             .navigationTitle("Übersicht")
         }
-        .searchable(text: $searchTerm, prompt: "Suchen...")
-        
     }
     
     
